@@ -6,6 +6,10 @@ Horse Race is a application to make digital bets with digital money in a digital
   <img src=".github/main.png" alt="Application Interface" />
 </p>
 
+## Assets
+
+* Horse Gif: [Link](https://boingboing.net/2014/05/23/coder-needed-to-make-8-bit-zar.html)
+
 ## 🏃 Getting Started
 
 First, clone this respository and access the created folder:
