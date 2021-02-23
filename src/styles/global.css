@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+body, div#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  min-height: 100vh;
+
+  font-family: 'DotGothic16', sans-serif;
+}
+
+h1 {
+  font-size: 40pt;
+}
+
+span.subtitle {
+  font-size: 20pt;
+}
+
+.button {
+  position: relative;
+  padding: 8px 16px;
+  background-color: tomato;
+  color: white;
+  font-weight: bold;
+  box-shadow: inset -4px -4px 0px 0px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  font-family: 'DotGothic16', sans-serif;
+  font-size: 20px;
+  margin: 8px;
+  filter: contrast(0.8);
+}
+.button::before, .button::after {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  box-sizing: content-box;
+  content: "";
+}
+.button::before {
+  top: -4px;
+  left: 0;
+  border-top: 4px black solid;
+  border-bottom: 4px black solid;
+}
+.button::after {
+  left: -4px;
+  top: 0;
+  border-left: 4px black solid;
+  border-right: 4px black solid;
+}
+.button:hover {
+  filter: contrast(1);
+}
+.button:active {
+  box-shadow: inset 4px 4px 0px 0px rgba(0, 0, 0, 0.2);
+  filter: brightness(0.9)
+}
+
+main {
+  max-width: 720px;
+  width: 100%;
+  height: 540px;
+  border: 4px dashed black;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 100%;
+}
