@@ -27,6 +27,7 @@ section#bet .horse.active {
 section#bet .horse img {
   width: 70%;
   height: auto;
+  user-select: none;
 }
 section#bet .horse span {
   margin: 8px;
