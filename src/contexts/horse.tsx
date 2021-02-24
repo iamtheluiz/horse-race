@@ -1,6 +1,6 @@
 import React, { createContext, useState, useContext } from "react";
 
-interface Horse {
+export interface Horse {
   name: string;
   velocity: number;
   position: number | undefined;
