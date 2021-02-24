@@ -17,6 +17,12 @@ section#bet .horse {
   align-items: center;
   cursor: pointer;
   border: 4px dashed black;
+  transition: all 0.2s;
+}
+section#bet .horse.active {
+  border-color: #fa962a;
+  color: #fa962a;
+  background-color: #fa952a42;
 }
 section#bet .horse img {
   width: 70%;
