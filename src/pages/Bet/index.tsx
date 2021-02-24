@@ -1,6 +1,8 @@
 import React from "react";
-import HorseItem from "../../components/HorseItem";
 import { useHorse } from "../../contexts/horse";
+
+import Button from "../../components/Button";
+import HorseItem from "../../components/HorseItem";
 
 import "./styles.css";
 
@@ -19,7 +21,7 @@ const Bet: React.FC = () => {
         <footer>
           <span>R$</span>
           <input className="input-text" type="text" />
-          <button className="button" style={{ backgroundColor: "#93cc42" }}>Bet!</button>
+          <Button style={{ backgroundColor: "#93cc42" }}>Bet!</Button>
         </footer>
       </div>
     </section>

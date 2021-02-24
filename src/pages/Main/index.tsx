@@ -1,6 +1,8 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
 
+import Button from "../../components/Button";
+
 const Main: React.FC = () => {
   const history = useHistory();
 
@@ -12,13 +14,7 @@ const Main: React.FC = () => {
     <section id="menu">
       <h1>Horse Race!</h1>
       <span className="subtitle">Are you ready? Make your bets!</span>
-      <button
-        id="start-game"
-        className="button outline"
-        onClick={handleNavigateToBet}
-      >
-        Start!
-      </button>
+      <Button id="start-game" onClick={handleNavigateToBet}>Start!</Button>
     </section>
   );
 };
