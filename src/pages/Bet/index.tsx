@@ -13,7 +13,7 @@ const Bet: React.FC = () => {
     <section id="bet">
       <h1>Make Your Bet!</h1>
       <div className="content">
-        <div className="horses">
+        <div className="horse-list">
           {horses.map(horse => (
             <HorseItem key={horse.name} horse={horse} />
           ))}

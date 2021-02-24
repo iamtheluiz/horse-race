@@ -1,7 +1,7 @@
 section#bet {
 
 }
-section#bet .horses {
+section#bet .horse-list {
   flex: 1;
   display: flex;
   flex-direction: row;
@@ -9,16 +9,16 @@ section#bet .horses {
   justify-content: space-around;
   align-items: center;
 }
-section#bet .horse:nth-child(1) img {
+section#bet .horse-item:nth-child(1) img {
   filter: hue-rotate(70deg);
 }
-section#bet .horse:nth-child(2) img {
+section#bet .horse-item:nth-child(2) img {
   filter: hue-rotate(180deg);
 }
-section#bet .horse:nth-child(3) img {
+section#bet .horse-item:nth-child(3) img {
   filter: hue-rotate(300deg);
 }
-section#bet .horse:nth-child(4) img {
+section#bet .horse-item:nth-child(4) img {
   filter: hue-rotate(350deg);
 }
 section#bet footer span {
