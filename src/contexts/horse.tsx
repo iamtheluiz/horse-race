@@ -1,4 +1,4 @@
-import React, { createContext, useState, useContext } from 'react'
+import React, { createContext, useState, useContext } from "react";
 
 interface Horse {
   name: string;
@@ -13,28 +13,28 @@ interface HorseContextProps {
   setHorses: (horses: Horse[]) => void;
 }
 
-const HorseContext = createContext<HorseContextProps | null>(null)
+const HorseContext = createContext<HorseContextProps | null>(null);
 
 const HorseProvider: React.FC = ({ children }) => {
   const [selectedHorse, setSelectedHorse] = useState<Horse>({} as Horse);
   const [horses, setHorses] = useState<Horse[]>([
     {
-      name: 'Silver',
+      name: "Silver",
       velocity: 0,
       position: undefined
     },
     {
-      name: 'Pegasus',
+      name: "Pegasus",
       velocity: 0,
       position: undefined
     },
     {
-      name: 'Jockey',
+      name: "Jockey",
       velocity: 0,
       position: undefined
     },
     {
-      name: 'Washington',
+      name: "Washington",
       velocity: 0,
       position: undefined
     }
@@ -49,14 +49,14 @@ const HorseProvider: React.FC = ({ children }) => {
     }}>
       {children}
     </HorseContext.Provider>
-  )
-}
+  );
+};
 
 function useHorse(): HorseContextProps {
   const context = useContext(HorseContext);
 
   if (!context) {
-    throw new Error('useHorse must be used within a HorseProvider');
+    throw new Error("useHorse must be used within a HorseProvider");
   }
 
   return context;

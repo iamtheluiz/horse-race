@@ -1,5 +1,5 @@
 import React from 'react';
-import { useHorse } from '../../context/horse';
+import { useHorse } from '../../contexts/horse';
 
 import './styles.css';
 

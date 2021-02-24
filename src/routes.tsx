@@ -1,9 +1,9 @@
-import React from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import React from "react";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 // Pages
-import Main from './pages/Main';
-import Bet from './pages/Bet';
+import Main from "./pages/Main";
+import Bet from "./pages/Bet";
 
 const Routes: React.FC = () => {
   return (
@@ -14,6 +14,6 @@ const Routes: React.FC = () => {
       </Switch>
     </BrowserRouter>
   );
-}
+};
 
 export default Routes;

@@ -1,11 +1,11 @@
-import React from 'react';
-import { useHistory } from 'react-router-dom';
+import React from "react";
+import { useHistory } from "react-router-dom";
 
 const Main: React.FC = () => {
-  const history = useHistory()
+  const history = useHistory();
 
   function handleNavigateToBet() {
-    history.push('/bet')
+    history.push("/bet");
   }
 
   return (
@@ -21,6 +21,6 @@ const Main: React.FC = () => {
       </button>
     </section>
   );
-}
+};
 
 export default Main;
