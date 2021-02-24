@@ -2,6 +2,8 @@ import React from "react";
 
 import { Horse, useHorse } from "../../contexts/horse";
 
+import "./styles.css";
+
 interface HorseItemProps {
   horse: Horse;
 }
@@ -11,7 +13,7 @@ const HorseItem: React.FC<HorseItemProps> = ({ horse }) => {
 
   return (
     <div
-      className={`horse ${horse.name === selectedHorse.name ? "active" : ""}`}
+      className={`horse-item ${horse.name === selectedHorse.name ? "active" : ""}`}
       onClick={() => setSelectedHorse(horse)}
     >
       <img src="/img/horse.gif" alt="Horse Gif" />

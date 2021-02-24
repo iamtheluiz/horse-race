@@ -1,0 +1,23 @@
+.horse-item {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: 4px dashed black;
+  transition: all 0.2s;
+}
+.horse-item.active {
+  border-color: #fa962a;
+  color: #fa962a;
+  background-color: #fa952a42;
+}
+.horse-item img {
+  width: 70%;
+  height: auto;
+  user-select: none;
+}
+.horse-item span {
+  margin: 8px;
+}
