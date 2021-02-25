@@ -1,26 +1,5 @@
 import { useEffect, useState } from "react";
-
-type Theme = {
-  [key: string]: string;
-  "--background-color": string;
-  "--text-color": string;
-}
-type ThemeList = {
-  [key: string]: Theme;
-  light: Theme;
-  dark: Theme;
-}
-
-export const themes: ThemeList = {
-  light: {
-    "--background-color": "#FFF",
-    "--text-color": "#000"
-  },
-  dark: {
-    "--background-color": "#000",
-    "--text-color": "#FFF",
-  }
-};
+import { themes } from "../config/themes";
 
 interface useThemeProps {
   setSelectedTheme: (arg0: string) => void;
@@ -33,8 +12,6 @@ const useTheme = (): useThemeProps => {
   useEffect(() => {
     const storedTheme: string | null = localStorage.getItem("@iamtheluiz-horse-race/theme");
 
-    console.log(storedTheme);
-
     if (storedTheme && Object.keys(themes).includes(storedTheme)) {
       setSelectedTheme(storedTheme);
     }
@@ -42,7 +19,6 @@ const useTheme = (): useThemeProps => {
 
   useEffect(() => {
     applyTheme(selectedTheme);
-    console.log("oi");
   }, [selectedTheme]);
 
   function applyTheme(themeKey: string) {
