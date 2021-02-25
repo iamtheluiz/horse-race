@@ -37,6 +37,7 @@ span.subtitle {
   margin: 8px;
   filter: contrast(0.8);
   border: 4px black solid;
+  margin-left: 0px;
 }
 
 section {
@@ -56,9 +57,10 @@ section div.content {
   width: 100%;
   flex-direction: column;
 }
-section div.content footer {
+section footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
   padding: 16px;
 }
