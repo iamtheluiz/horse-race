@@ -21,14 +21,14 @@
 .button::before {
   top: -4px;
   left: 0;
-  border-top: 4px black solid;
-  border-bottom: 4px black solid;
+  border-top: 4px var(--border-color) solid;
+  border-bottom: 4px var(--border-color) solid;
 }
 .button::after {
   left: -4px;
   top: 0;
-  border-left: 4px black solid;
-  border-right: 4px black solid;
+  border-left: 4px var(--border-color) solid;
+  border-right: 4px var(--border-color) solid;
 }
 .button:hover {
   filter: contrast(1);
