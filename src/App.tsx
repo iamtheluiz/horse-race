@@ -1,7 +1,8 @@
 import React from "react";
-import { HorseProvider } from "./contexts/horse";
+
 import useTheme from "./hooks/useTheme";
 import Routes from "./routes";
+import { ApplicationProvider } from "./contexts";
 
 // Styles
 import "./styles/global.css";
@@ -10,9 +11,9 @@ const App: React.FC = () => {
   useTheme(); // Start in any page
 
   return (
-    <HorseProvider>
+    <ApplicationProvider>
       <Routes />
-    </HorseProvider>
+    </ApplicationProvider>
   );
 };
 
