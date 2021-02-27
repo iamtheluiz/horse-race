@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 // Pages
 import Main from "./pages/Main";
 import Bet from "./pages/Bet";
+import Race from "./pages/Race";
 
 const Routes: React.FC = () => {
   return (
@@ -11,6 +12,7 @@ const Routes: React.FC = () => {
       <Switch>
         <Route path="/" component={Main} exact />
         <Route path="/bet" component={Bet} exact />
+        <Route path="/race" component={Race} exact />
       </Switch>
     </BrowserRouter>
   );

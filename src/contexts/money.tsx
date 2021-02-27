@@ -1,17 +1,22 @@
 import React, { createContext, useState, useContext } from "react";
 
 interface MoneyContextProps {
-  balance: number
+  balance: number;
+  bet: number;
+  setBet: (bet: number) => void;
 }
 
 const MoneyContext = createContext<MoneyContextProps | null>(null);
 
 const MoneyProvider: React.FC = ({ children }) => {
   const [balance, setBalance] = useState(10);
+  const [bet, setBet] = useState(1);
 
   return (
     <MoneyContext.Provider value={{
-      balance
+      balance,
+      bet,
+      setBet
     }}>
       {children}
     </MoneyContext.Provider>
