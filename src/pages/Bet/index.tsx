@@ -1,5 +1,6 @@
-import React from "react";
+import React, { FormEvent } from "react";
 import { useHorse } from "../../contexts/horse";
+import { useMoney } from "../../contexts/money";
 import { useHistory } from "react-router-dom";
 
 import Button from "../../components/Button";
@@ -8,8 +9,17 @@ import HorseItem from "../../components/HorseItem";
 import "./styles.css";
 
 const Bet: React.FC = () => {
-  const { horses } = useHorse();
+  const { horses, selectedHorse } = useHorse();
+  const { balance, bet, setBet } = useMoney();
   const history = useHistory();
+
+  function handleBetSubmit(event: FormEvent) {
+    event.preventDefault();
+
+    if (horses.includes(selectedHorse) && bet > 0.01 && bet <= balance) {
+      history.push("/race");
+    }
+  }
 
   return (
     <section id="bet">
@@ -18,7 +28,7 @@ const Bet: React.FC = () => {
         <h1>Make Your Bet!</h1>
         <div className="money">
           <div className="icon">$</div>
-          <span>3.00</span>
+          <span>{balance.toFixed(2)}</span>
         </div>
       </header>
       <div className="content">
@@ -29,9 +39,18 @@ const Bet: React.FC = () => {
         </div>
       </div>
       <footer>
-        <span>$</span>
-        <input className="input-text" type="number" />
-        <Button style={{ backgroundColor: "#93cc42" }}>Bet!</Button>
+        <form onSubmit={handleBetSubmit}>
+          <span>$</span>
+          <input
+            className="input-text"
+            type="number"
+            min="0.01"
+            step="0.01"
+            value={bet}
+            onChange={event => setBet(Number(event.target.value))}
+          />
+          <Button style={{ backgroundColor: "#93cc42" }}>Bet!</Button>
+        </form>
       </footer>
     </section>
   );
