@@ -1,0 +1,53 @@
+section#race div.sky {
+  width: 100%;
+  height: 40%;
+  background-color: skyblue;
+}
+section#race div.ground {
+  width: 100%;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  background-color: rgb(189, 142, 88);
+}
+section#race div.ground div.fance {
+  width: 100%;
+  background-repeat: repeat-x;
+  background-size: auto 100%;
+  height: 30px;
+  image-rendering: pixelated;
+}
+section#race div.ground div.fance:last-child {
+  position: absolute;
+  bottom: 0px;
+}
+section#race div.ground div.track {
+  background-color: green;
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
+}
+section#race div.ground div.track,
+section#race div.ground div.horse-item
+{
+  height: 46px;
+}
+section#race div.ground div.racecourse {
+  position: relative;
+  overflow: hidden;
+}
+section#race div.ground div.horses {
+  position: absolute;
+  top: -10px;
+  left: -40px;
+}
+section#race div.ground div.horse-item img {
+  height: 100%;
+}
+section#race div.ground div.track:first-child {
+  border-top: 0px solid white;
+}
+section#race div.ground div.track:last-child {
+  border-bottom: 0px solid white;
+}

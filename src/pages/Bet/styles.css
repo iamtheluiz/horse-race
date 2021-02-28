@@ -61,18 +61,6 @@ section#bet .horse-list {
   justify-content: space-evenly;
   align-items: center;
 }
-section#bet .horse-item:nth-child(1) img {
-  filter: hue-rotate(70deg);
-}
-section#bet .horse-item:nth-child(2) img {
-  filter: hue-rotate(180deg);
-}
-section#bet .horse-item:nth-child(3) img {
-  filter: hue-rotate(300deg);
-}
-section#bet .horse-item:nth-child(4) img {
-  filter: hue-rotate(350deg);
-}
 section#bet > footer form {
   flex: 1;
   display: flex;

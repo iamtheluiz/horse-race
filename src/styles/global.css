@@ -44,6 +44,19 @@ span.subtitle {
   margin-left: 0px;
 }
 
+.horse-item:nth-child(1) {
+  filter: hue-rotate(70deg);
+}
+.horse-item:nth-child(2) {
+  filter: hue-rotate(180deg);
+}
+.horse-item:nth-child(3) {
+  filter: hue-rotate(300deg);
+}
+.horse-item:nth-child(4) {
+  filter: hue-rotate(350deg);
+}
+
 section {
   display: flex;
   flex-direction: column;

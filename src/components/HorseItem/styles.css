@@ -1,4 +1,4 @@
-.horse-item {
+.horse-container {
   width: 35%;
   display: flex;
   flex-direction: column;
@@ -8,16 +8,16 @@
   border: 4px dashed var(--text-color);
   transition: all 0.2s;
 }
-.horse-item.active {
+.horse-container.active {
   border-color: #fa962a;
   color: #fa962a;
   background-color: #fa952a42;
 }
-.horse-item img {
+.horse-container img {
   width: 70%;
   height: auto;
   user-select: none;
 }
-.horse-item span {
+.horse-container span {
   margin: 8px;
 }
