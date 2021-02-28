@@ -1,14 +1,17 @@
 import React from "react";
 
-import { HorseProvider } from "./horse";
+import { DialogProvider } from "./dialog";
 import { MoneyProvider } from "./money";
+import { HorseProvider } from "./horse";
 
 export const ApplicationProvider: React.FC = ({ children }) => {
   return (
-    <MoneyProvider>
-      <HorseProvider>
-        {children}
-      </HorseProvider>
-    </MoneyProvider>
+    <DialogProvider>
+      <MoneyProvider>
+        <HorseProvider>
+          {children}
+        </HorseProvider>
+      </MoneyProvider>
+    </DialogProvider>
   );
 };
