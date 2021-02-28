@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { createContext, useState } from "react";
 
 export interface DialogProps {
@@ -33,3 +33,13 @@ export const DialogProvider: React.FC = ({ children }) => {
     </DialogContext.Provider>
   );
 };
+
+export function useDialog(): DialogContextProps {
+  const context = useContext(DialogContext);
+
+  if (!context) {
+    throw new Error("useHorse must be used within a HorseProvider");
+  }
+
+  return context;
+}
