@@ -7,18 +7,45 @@ import Button from "../../components/Button";
 import HorseItem from "../../components/HorseItem";
 
 import "./styles.css";
+import { useDialog } from "../../contexts/dialog";
 
 const Bet: React.FC = () => {
   const { horses, selectedHorse } = useHorse();
   const { balance, bet, setBet } = useMoney();
+  const { setDialog } = useDialog();
   const history = useHistory();
 
   function handleBetSubmit(event: FormEvent) {
     event.preventDefault();
 
-    if (horses.includes(selectedHorse) && bet > 0.01 && bet <= balance) {
-      history.push("/race");
+    if (!horses.includes(selectedHorse)) {
+      setDialog({
+        title: "Missing selected horse",
+        message: "(☞ﾟヮﾟ)☞ You need to select a horse to submit a bet!",
+        type: "warning"
+      });
+      return;
     }
+
+    if (bet < 0.01) {
+      setDialog({
+        title: "Bet not allowed",
+        message: "You can't use a value lower than $0.01 in a bet!",
+        type: "warning"
+      });
+      return;
+    }
+
+    if (bet > balance) {
+      setDialog({
+        title: "Bet greater than balance",
+        message: "You can't bet more than you have! Take money in the bank (・_・;)",
+        type: "warning"
+      });
+      return;
+    }
+
+    history.push("/race");
   }
 
   return (
@@ -44,7 +71,6 @@ const Bet: React.FC = () => {
           <input
             className="input-text"
             type="number"
-            min="0.01"
             step="0.01"
             value={bet}
             onChange={event => setBet(Number(event.target.value))}
