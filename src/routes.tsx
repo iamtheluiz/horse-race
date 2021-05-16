@@ -8,7 +8,7 @@ import Race from "./pages/Race";
 
 const Routes: React.FC = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="horse-race">
       <Switch>
         <Route path="/" component={Main} exact />
         <Route path="/bet" component={Bet} exact />
