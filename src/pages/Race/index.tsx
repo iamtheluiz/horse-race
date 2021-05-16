@@ -7,6 +7,7 @@ import { Horse, useHorse } from "../../contexts/horse";
 import { useDialog } from "../../contexts/dialog";
 import { useMoney } from "../../contexts/money";
 
+import horseGif from "../../assets/horse.gif";
 import fenceImage from "../../assets/fence.png";
 
 import "./styles.css";
@@ -101,7 +102,7 @@ const Race: React.FC = () => {
           <div className="horses">
             {horses.map(horse => (
               <div key={horse.name} className="horse-item" style={{ marginLeft: `${horse.position}%` }}>
-                <img src="/img/horse.gif" alt="Horse Gif" />
+                <img src={horseGif} alt="Horse Gif" />
               </div>
             ))}
           </div>
