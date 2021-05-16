@@ -3,7 +3,7 @@ import React, { createContext, useState, useContext } from "react";
 export interface Horse {
   name: string;
   velocity: number;
-  position: number | undefined;
+  position: number; // Percentage of the track
 }
 
 interface HorseContextProps {
@@ -21,22 +21,22 @@ const HorseProvider: React.FC = ({ children }) => {
     {
       name: "Silver",
       velocity: 0,
-      position: undefined
+      position: 0
     },
     {
       name: "Pegasus",
       velocity: 0,
-      position: undefined
+      position: 0
     },
     {
       name: "Jockey",
       velocity: 0,
-      position: undefined
+      position: 0
     },
     {
       name: "Washington",
       velocity: 0,
-      position: undefined
+      position: 0
     }
   ]);
 

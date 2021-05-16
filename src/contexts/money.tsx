@@ -1,9 +1,10 @@
 import React, { createContext, useState, useContext } from "react";
 
 interface MoneyContextProps {
-  balance: number;
   bet: number;
   setBet: (bet: number) => void;
+  balance: number;
+  setBalance: (balance: number) => void;
 }
 
 const MoneyContext = createContext<MoneyContextProps | null>(null);
@@ -14,9 +15,10 @@ const MoneyProvider: React.FC = ({ children }) => {
 
   return (
     <MoneyContext.Provider value={{
-      balance,
       bet,
-      setBet
+      setBet,
+      balance,
+      setBalance,
     }}>
       {children}
     </MoneyContext.Provider>
