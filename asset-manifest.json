@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/horse-race/static/css/main.5176c714.chunk.css",
-    "main.js": "/horse-race/static/js/main.c86ef264.chunk.js",
-    "main.js.map": "/horse-race/static/js/main.c86ef264.chunk.js.map",
+    "main.js": "/horse-race/static/js/main.281787f3.chunk.js",
+    "main.js.map": "/horse-race/static/js/main.281787f3.chunk.js.map",
     "runtime-main.js": "/horse-race/static/js/runtime-main.1ae44d51.js",
     "runtime-main.js.map": "/horse-race/static/js/runtime-main.1ae44d51.js.map",
     "static/js/2.f5eda7d3.chunk.js": "/horse-race/static/js/2.f5eda7d3.chunk.js",
@@ -16,6 +16,6 @@
     "static/js/runtime-main.1ae44d51.js",
     "static/js/2.f5eda7d3.chunk.js",
     "static/css/main.5176c714.chunk.css",
-    "static/js/main.c86ef264.chunk.js"
+    "static/js/main.281787f3.chunk.js"
   ]
 }
